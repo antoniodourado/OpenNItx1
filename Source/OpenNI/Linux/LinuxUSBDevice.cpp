@@ -23,7 +23,7 @@
 //---------------------------------------------------------------------------
 #include <XnPlatform.h>
 
-#if (XN_PLATFORM == XN_PLATFORM_LINUX_ARM)
+#if (XN_PLATFORM == XN_PLATFORM_LINUX_ARM || XN_PLATFORM == XN_PLATFORM_LINUX_AARCH64)
 
 #include <XnUSBDevice.h>
 #include <linux/usb/gadgetfs.h>

@@ -43,7 +43,7 @@
 //---------------------------------------------------------------------------
 #if (XN_PLATFORM == XN_PLATFORM_WIN32)
 	#include "Win32/XnOSWin32.h"
-#elif (XN_PLATFORM == XN_PLATFORM_LINUX_X86 || XN_PLATFORM == XN_PLATFORM_LINUX_ARM || XN_PLATFORM == XN_PLATFORM_MACOSX || XN_PLATFORM == XN_PLATFORM_ANDROID_ARM)
+#elif (XN_PLATFORM == XN_PLATFORM_LINUX_X86 || XN_PLATFORM == XN_PLATFORM_LINUX_ARM || XN_PLATFORM == XN_PLATFORM_LINUX_AARCH64 || XN_PLATFORM == XN_PLATFORM_MACOSX || XN_PLATFORM == XN_PLATFORM_ANDROID_ARM)
 	#include "Linux-x86/XnOSLinux-x86.h"
 #elif defined(_ARC)
 	#include "ARC/XnOSARC.h"
@@ -476,6 +476,7 @@ XN_C_API XnStatus XN_C_DECL xnOSDeleteDirectoryTree(const XnChar* strDirName);
 XN_C_API XnStatus XN_C_DECL xnOSGetApplicationFilesDir(XnChar* cpDirName, const XnUInt32 nBufferSize);
 XN_C_API XnStatus XN_C_DECL xnOSGetApplicationLibDir(XnChar* cpDirName, const XnUInt32 nBufferSize);
 #endif
+
 
 // INI
 XN_C_API XnStatus XN_C_DECL xnOSReadStringFromINI(const XnChar* cpINIFile, const XnChar* cpSection, const XnChar* cpKey, XnChar* cpDest, const XnUInt32 nDestLength);

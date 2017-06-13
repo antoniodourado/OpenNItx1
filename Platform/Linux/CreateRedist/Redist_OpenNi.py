@@ -185,6 +185,8 @@ else:
         PLATFORM = "x86"
     elif machinetype[:3] == "arm":
         PLATFORM = "Arm"
+    elif machinetype == "aarch64":
+	PLATFORM = "Aarch64"
     else:
         print "Unknown platform:", machinetype
         finish_script(1)
@@ -334,6 +336,7 @@ for includeFile in os.listdir("../../Include"):
 
 shutil.copytree("../../Include/Linux-x86", REDIST_DIR + "/Include/Linux-x86")
 shutil.copytree("../../Include/Linux-Arm", REDIST_DIR + "/Include/Linux-Arm")
+shutil.copytree("../../Include/Linux-Aarch64", REDIST_DIR + "/Include/Linux-Aarch64")
 shutil.copytree("../../Include/MacOSX", REDIST_DIR + "/Include/MacOSX")
 shutil.copytree("Build/Common", REDIST_DIR + "/Samples/Build/Common")
 
@@ -346,7 +349,7 @@ if PLATFORM == 'CE4100':
     samples_list.remove('NiViewer')
     samples_list.remove('NiSimpleViewer')
 
-if PLATFORM == 'Arm':
+if PLATFORM == 'Arm' or PLATFORM == 'Aarch64':
     samples_list.remove('NiUserTracker')
     samples_list.remove('NiViewer')
     samples_list.remove('NiSimpleViewer')
