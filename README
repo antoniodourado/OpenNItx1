@@ -234,3 +234,15 @@ MacOSX:
 			
 		To build the package manually, you can run "make" in the "Platform\Linux-x86\Build" directory.
 		If you wish to build the Mono wrappers, also run "make mono_wrapper" and "make mono_samples".
+
+
+===================================================================================================
+
+**TO BUILD ON JETSON TX1**
+
+-Define AARCH64_CXX as `export AARCH64_CXX=aarch64-linux-gnu-g++`
+-Create folder named staging somewhere you like and define AARCH64_STAGING as `export AARCH_64_STAGING=pathtofolder`
+-On create redist, run ./RedistMaker Aarch64
+-Install
+
+I based my steps on ARM example here: https://roboticsclub.org/redmine/projects/quadrotor/wiki/Cross_compiling_OpenNI_for_ARM
