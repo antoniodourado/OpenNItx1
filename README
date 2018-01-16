@@ -241,7 +241,7 @@ MacOSX:
 **TO BUILD ON JETSON TX1**
 
 -Define AARCH64_CXX as `export AARCH64_CXX=aarch64-linux-gnu-g++`
--Create folder named staging somewhere you like and define AARCH64_STAGING as `export AARCH_64_STAGING=pathtofolder`
+-Create folder named staging somewhere you like and define AARCH64_STAGING as `export AARCH64_STAGING=pathtofolder`
 -On create redist, run ./RedistMaker Aarch64
 -Install
 
